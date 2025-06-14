@@ -19,7 +19,7 @@ export default function List({
   if (sortBy === "description")
     sortedItems = allItems.slice().sort((a, b) => a.des.localeCompare(b.des));
   if (sortBy === "packed")
-    sortedItems = allItems.slice().sort((a, b) => +a.packed - +b.packed);
+    sortedItems = allItems.slice().sort((a, b) => +a.checked - +b.checked);
 
   return (
     <div className="list">
@@ -52,7 +52,6 @@ export default function List({
                   {isEn ? "Sort by description" : "مرتب کردن به ترتیب الفبا"}
                 </option>
                 <option value="packed">
-                  {" "}
                   {isEn
                     ? "Sort by packed status"
                     : "مرتب کردن با وضعیت انجام شده"}

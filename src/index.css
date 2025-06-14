@@ -10,6 +10,10 @@
   src: url('public/Fedra.ttf');
 }
 
+:root {
+  --main-font: 'IranS', "Quicksand", sans-serif;
+}
+
 html,
 body {
   height: 100%;

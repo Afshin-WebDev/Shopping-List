@@ -6,10 +6,10 @@ export default function Lii({ item, tfi, deleteItem, isEn }) {
     <li>
       <input
         type="checkbox"
-        checked={item.packed}
+        checked={item.checked}
         onChange={() => tfi(item.id)}
       />
-      <span className={item.packed ? "midline" : null}>
+      <span className={item.checked ? "midline" : null}>
         {isEn
           ? item.count + " \t " + item.item
           : convertNumbers(item.count + " " + item.item, false)}
